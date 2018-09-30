@@ -7,7 +7,7 @@ init:
 
 outline:
 	pandoc -s\
-		-V theme=moon\
+		-V theme=solarized\
 		-t revealjs\
 		-o outline.html\
 		outline.md
