@@ -22,7 +22,7 @@
 
 :::
 
-# Problems with Collaboration via Email
+# Problems with Collaboration
 
 ::: notes
 # Ask
@@ -48,13 +48,13 @@ A set of tools aimed at
 
 ::: incremental
 
-* knowing who is doing (or did) what
+* knowing who is doing what
 * fixing mistakes
 * collaborating in parallel
 
 :::
 
-# Git is one of the many Version Control Systems Available
+# Git is A VCS
 
 # How does Git work?
 
@@ -93,11 +93,47 @@ What your files "look like" at a given point in time
 
 :::
 
+::: incremental
+
 1. Modify your files
 1. Stage your modified files
 1. Take a snapshot!
 
-# Basic Workflow
+:::
+
+# Review
+
+::: notes
+
+# Ask
+
+1. What are the 3 steps for making a snapshot?
+1. What kind of "things" can you put in a snapshot? (What kind of files?)
+
+:::
+
+# Undoing your Mistakes
+
+::: notes
+
+# Act
+
+1. Have the students imagine there's something wrong with their most recent photo.
+1. Have them make another snapshot that __branches__ off of the 2nd photo.
+1. Have them make a new photo that merges the most recent photo and the last photo made.
+
+:::
+
+::: incremental
+
+* Checkout the photo that you want to "restart from"
+* Make a new snapshot
+* Merge the two tips of the timeline together by making a new "merge" snapshot
+
+:::
+
+
+# Let's do it
 
 ::: notes
 
@@ -119,33 +155,3 @@ What your files "look like" at a given point in time
 1. Commit
 
 :::
-
-# Undoing Your Work
-
-1. Checkout
-1. Revert
-
-# Checkout - Undoing Edits
-
-# Revert - Undoing Commits
-
----
-
-# GitHub 
-
-. . .
-
-> "GitHub Inc. is a web-based hosting service for version control using Git."
->  - Wikipedia Article on GitHub
-
-. . .
-
-Basically, a web site for hosting and managing projects that use Git.
-
-# How do we use GitHub
-
-![Graphic of local and remote repositories]()
-
-# Extra Resources
-
-https://git-scm.com/book/en/v2
