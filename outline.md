@@ -159,6 +159,6 @@ What your files "look like" at a given point in time
 1. Init
 1. Modify
 1. Stage (Add)
-1. Commit
+1. Commit (Snapshot)
 
 :::
