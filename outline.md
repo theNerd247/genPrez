@@ -1,140 +1,135 @@
-% Git and Github
+% Git
 % Noah Harvey
-
-# 
-
-![](https://imgs.xkcd.com/comics/git.png)
 
 # Objectives
 
-By the end of this lesson you will be able to:
-
 ::: incremental 
 
-* Define __*"version control system"*__ (VCS)
-* __*Initialize*__ a git repository and __*Commit*__ files to it
-* Use __*GitHub*__ to manage projects
+* Define "version control system" and explain why we need it.
+* Explain How Git Fundamentally Works
+* Use Basic Git commands to start managing your work
 
 :::
 
 ---
 
-# Git is a VCS
-## So What is a VCS?
+# Review - The Terminal
 
-# 
+::: incremental
 
-![(Hint, not this)](https://images1.loopnet.com/i2/GxEHR3oeLSAMr4hgJmUFJIat8njt8yLDopfhlgwRGiw/112/image.jpg){ width=75% }
-
-. . .
-
-a software suite to manage the history of a set of files
-
-::: notes
-
-* __Ask__: What kind of files can be managed by a version control system?
+* `man` - get help on a command
+* `-h` flag - a common flag to get short help on commands
 
 :::
 
-# Why should I care?
+# Problems with Collaboration via Email
 
 ::: notes
+# Ask
 
-# Act - Show not Tell
-
-1. Have class split into 3 groups
-1. Give each group a few pieces of legos and what part they're building
-1. Have the first group assemble their pieces and pass them to the next group,
-   etc.
-1. Explain how this is like everyone working collaboratively with a vcs
+1. What are some problems with copying files to everyone via email or using
+	 file sharing like dropbox?
+1. Why would it beneficial to track the history of a project?
 
 :::
 
-# How does it work?
+::: incremental
 
-. . .
+1. Know who's doing what
+2. Undo mistakes
+3. Merging everyone's work
 
-Git uses a sequence of __*snapshots*__ to track the history of your files
+:::
+
+
+# What is A Version Control System?
+
+A set of tools aimed at 
+
+::: incremental
+
+* knowing who is doing (or did) what
+* fixing mistakes
+* collaborating in parallel
+
+:::
+
+# Git is one of the many Version Control Systems Available
+
+# How does Git work?
+
+# Keeping Track of History
+
+::: notes
+
+* In order for Git to solve the 3 problems we've discussed it needs a way to
+  keep track of the history of your projects
+
+* It does this by seeing your project history as a timeline of photos
+
+:::
+
+Git uses a sequence of "photos" or __*snapshots*__ to track the history of your
+files
 
 # What's a snapshot?
 
-. . .
+What your files "look like" at a given point in time
 
-The state of all your files at some defined time in your repository history.
+# Making a Snapshot
 
-# Making your first Snapshot
+::: notes
 
----
+# Act
 
-## Step 0 - Initializing a Repository
+1. Have the students draw 2 stick figures and write a single letter name
+	 underneath them. _Modify_
+1. Then have them draw a simple stage under the stick figures _Stage_
+1. Make hand motion as if you're taking a photo and saving it to the time line
+	 _Snapshot or commit_
+1. Have the students write a 3 word description and a time above the photo -
+	 Explain this is so we can remember when the photo was made and what was
+   going on
 
-. . .
+:::
 
-```bash
-$ git init
-Initialized empty Git repository in /.../tmp/.git/
-```
-. . .
+1. Modify your files
+1. Stage your modified files
+1. Take a snapshot!
 
-This creates a `.git` directory with all the "stuff" git needs
+# Basic Workflow
 
----
+::: notes
 
-## Step 1 - Modify Your files
+# Act - In Terminal
 
-```bash
-$ echo "chicken chicken chicken" > a.txt
-$ echo "chi chi chi" > b.txt
-```
+1. `$ git init`
+1. `$ echo 'chicken' > a.txt`
+1. `$ echo 'turkey' > b.txt`
+1. `$ git add a.txt b.txt`
+1. `$ git commit`
 
----
+:::
 
-## Step 2 - Stage your files
+::: incremental
 
-```bash
-$ git add a.txt b.txt
-```
+1. Init
+1. Modify
+1. Stage (Add)
+1. Commit
 
----
+:::
 
-## Step 3 - Commit You Files
+# Undoing Your Work
 
-```bash
-$ git commit
-```
+1. Checkout
+1. Revert
 
----
+# Checkout - Undoing Edits
 
-## Step 3 1/2 - Write your Commit Message
-
-```
-our first commit
-
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch master
-#
-# Initial commit
-#
-# Changes to be committed:
-#       new file:   a.txt
-#       new file:   b.txt
-#
-```
+# Revert - Undoing Commits
 
 ---
-
-## Step 4 (optional) - Display your history
-
-```bash
-$ git log
-commit f12a4d2c93118c756ba98b767fed0f14c4d1c538 (HEAD -> master)
-Author: theNerd247 <noah.harvey247 gm>
-Date:   Sat Sep 29 21:28:33 2018 -0400
-
-    our first commit
-```
 
 # GitHub 
 
@@ -145,7 +140,11 @@ Date:   Sat Sep 29 21:28:33 2018 -0400
 
 . . .
 
-Basically, a fancy webapp for hosting projects that use Git.
+Basically, a web site for hosting and managing projects that use Git.
+
+# How do we use GitHub
+
+![Graphic of local and remote repositories]()
 
 # Extra Resources
 
