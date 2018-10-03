@@ -139,11 +139,18 @@ What your files "look like" at a given point in time
 
 # Act - In Terminal
 
+`screen -S gen`
+`screen -x gen`
+
 1. `$ git init`
 1. `$ echo 'chicken' > a.txt`
 1. `$ echo 'turkey' > b.txt`
-1. `$ git add a.txt b.txt`
+1. `$ echo 'bird' > c.txt`
+1. `$ git add a.txt`
+1. `$ git add b.txt c.txt`
+1. `$ git status`
 1. `$ git commit`
+1. `$ git log`
 
 :::
 
