@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Noah Harvey">
+  <title>Git</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Git</h1>
+  <p class="author">Noah Harvey</p>
+</section>
+
+<section id="objectives" class="slide level1">
+<h1>Objectives</h1>
+<div>
+<ul>
+<li class="fragment">Define “version control system” and explain why we need it.</li>
+<li class="fragment">Explain How Git Fundamentally Works</li>
+<li class="fragment">Use Basic Git commands to start managing your work</li>
+</ul>
+</div>
+</section>
+<section id="review---the-terminal" class="slide level1">
+<h1>Review - The Terminal</h1>
+<div>
+<ul>
+<li class="fragment"><code>man</code> - get help on a command</li>
+<li class="fragment"><code>-h</code> flag - a common flag to get short help on commands</li>
+</ul>
+</div>
+</section>
+<section id="problems-with-collaboration" class="slide level1">
+<h1>Problems with Collaboration</h1>
+<aside class="notes">
+<h1 id="ask">Ask</h1>
+<ol type="1">
+<li>What are some problems with copying files to everyone via email or using file sharing like dropbox?</li>
+<li>Why would it beneficial to track the history of a project?</li>
+</ol>
+</aside>
+<div>
+<ol type="1">
+<li class="fragment">Know who’s doing what</li>
+<li class="fragment">Undo mistakes</li>
+<li class="fragment">Merging everyone’s work</li>
+</ol>
+</div>
+</section>
+<section id="what-is-a-version-control-system" class="slide level1">
+<h1>What is A Version Control System?</h1>
+<p>A set of tools aimed at</p>
+<div>
+<ul>
+<li class="fragment">knowing who is doing what</li>
+<li class="fragment">fixing mistakes</li>
+<li class="fragment">collaborating in parallel</li>
+</ul>
+</div>
+</section>
+<section id="git-is-a-vcs" class="slide level1">
+<h1>Git is A VCS</h1>
+</section>
+<section id="how-does-git-work" class="slide level1">
+<h1>How does Git work?</h1>
+</section>
+<section id="keeping-track-of-history" class="slide level1">
+<h1>Keeping Track of History</h1>
+<aside class="notes">
+<ul>
+<li><p>In order for Git to solve the 3 problems we’ve discussed it needs a way to keep track of the history of your projects</p></li>
+<li><p>It does this by seeing your project history as a timeline of photos</p></li>
+</ul>
+</aside>
+<p>Git uses a sequence of “photos” or <strong><em>snapshots</em></strong> to track the history of your files</p>
+</section>
+<section id="whats-a-snapshot" class="slide level1">
+<h1>What’s a snapshot?</h1>
+<p>What your files “look like” at a given point in time</p>
+</section>
+<section id="making-a-snapshot" class="slide level1">
+<h1>Making a Snapshot</h1>
+<aside class="notes">
+<h1 id="act">Act</h1>
+<ol type="1">
+<li>Have the students draw 2 stick figures and write a single letter name underneath them. <em>Modify</em></li>
+<li>Then have them draw a simple stage under the stick figures <em>Stage</em></li>
+<li>Make hand motion as if you’re taking a photo and saving it to the time line <em>Snapshot or commit</em></li>
+<li>Have the students write a 3 word description and a time above the photo - Explain this is so we can remember when the photo was made and what was going on</li>
+</ol>
+</aside>
+<div>
+<ol type="1">
+<li class="fragment">Modify your files</li>
+<li class="fragment">Stage your modified files</li>
+<li class="fragment">Take a snapshot!</li>
+</ol>
+</div>
+</section>
+<section id="review" class="slide level1">
+<h1>Review</h1>
+<aside class="notes">
+<h1 id="ask-1">Ask</h1>
+<ol type="1">
+<li>What are the 3 steps for making a snapshot?</li>
+<li>What kind of “things” can you put in a snapshot? (What kind of files?)</li>
+</ol>
+</aside>
+</section>
+<section id="undoing-your-mistakes" class="slide level1">
+<h1>Undoing your Mistakes</h1>
+<aside class="notes">
+<h1 id="act-1">Act</h1>
+<ol type="1">
+<li>Have the students imagine there’s something wrong with their most recent photo.</li>
+<li>Have them make another snapshot that <strong>branches</strong> off of the 2nd photo.</li>
+<li>Have them make a new photo that merges the most recent photo and the last photo made.</li>
+</ol>
+</aside>
+<div>
+<ul>
+<li class="fragment">Checkout the photo that you want to “restart from”</li>
+<li class="fragment">Make a new snapshot</li>
+<li class="fragment">Merge the two tips of the timeline together by making a new “merge” snapshot</li>
+</ul>
+</div>
+</section>
+<section id="lets-do-it" class="slide level1">
+<h1>Let’s do it</h1>
+<aside class="notes">
+<h1 id="act---in-terminal">Act - In Terminal</h1>
+<p><code>screen -S gen</code> <code>screen -x gen</code></p>
+<ol type="1">
+<li><code>$ git init</code></li>
+<li><code>$ echo 'chicken' &gt; a.txt</code></li>
+<li><code>$ echo 'turkey' &gt; b.txt</code></li>
+<li><code>$ echo 'bird' &gt; c.txt</code></li>
+<li><code>$ git add a.txt</code></li>
+<li><code>$ git add b.txt c.txt</code></li>
+<li><code>$ git status</code></li>
+<li><code>$ git commit</code></li>
+<li><code>$ git log</code></li>
+</ol>
+</aside>
+<div>
+<ol type="1">
+<li class="fragment">Init</li>
+<li class="fragment">Modify</li>
+<li class="fragment">Stage (Add)</li>
+<li class="fragment">Commit (Snapshot)</li>
+</ol>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
